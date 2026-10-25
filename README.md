@@ -7,7 +7,11 @@
 [![JWT](https://img.shields.io/badge/JWT-Authentication-orange.svg)](https://jwt.io/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple.svg)](https://getbootstrap.com/)
 
+[![Documentation](https://img.shields.io/badge/Documentation-PDF%20Download-red.svg)](./HotelPro_Project_Documentation.pdf)
+
 > **Your ultimate hotel management solution!** Our system streamlines hotel operations with a secure, scalable backend, ensuring efficient booking, guest management, and payment processing with intuitive interfaces and robust JWT authentication.
+
+📄 **Official Project Documentation:** [Download HotelPro_Project_Documentation.pdf](./HotelPro_Project_Documentation.pdf)
 
 ---
 

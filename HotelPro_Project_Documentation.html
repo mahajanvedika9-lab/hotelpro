@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HotelPro - Project Documentation</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 16mm 18mm 16mm 18mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.45;
+      font-size: 10.5pt;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .page {
+      page-break-after: always;
+      break-after: page;
+      min-height: 980px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    h1.title-main {
+      font-size: 22pt;
+      font-weight: 800;
+      text-align: center;
+      color: #0f172a;
+      margin: 0 0 16px 0;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h2.heading-green {
+      color: #16a34a;
+      font-size: 13pt;
+      font-weight: 700;
+      margin: 14px 0 6px 0;
+    }
+    h3.sub-blue {
+      color: #2563eb;
+      font-size: 11.5pt;
+      font-weight: 700;
+      margin: 10px 0 4px 0;
+    }
+    h4.epic-header {
+      color: #15803d;
+      font-size: 13pt;
+      font-weight: 700;
+      margin: 16px 0 8px 0;
+    }
+    p {
+      margin: 0 0 8px 0;
+      text-align: justify;
+    }
+    ul, ol {
+      margin: 4px 0 10px 0;
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .red-text {
+      color: #dc2626;
+      font-weight: 600;
+    }
+    .blue-link {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+    code {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    pre {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 9pt;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 5px;
+      padding: 8px 12px;
+      margin: 6px 0 10px 0;
+      line-height: 1.35;
+    }
+    .diagram-box {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 8px 0 10px 0;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px 0;
+      font-size: 9.5pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 9px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      font-weight: 600;
+    }
+    .badge-guest { background: #dbeafe; color: #1e40af; }
+    .badge-staff { background: #fef3c7; color: #92400e; }
+    .badge-admin { background: #fee2e2; color: #991b1b; }
+    .note-box {
+      background: #fef3c7;
+      border-left: 3.5px solid #f59e0b;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+      margin: 8px 0;
+      font-size: 9.5pt;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+    <h1 class="title-main">HOTELPRO: HOTEL MANAGEMENT SOLUTION</h1>
+
+    <h2 class="heading-green">Project Description:</h2>
+    <ul>
+      <li>
+        <strong>HotelPro</strong> is an end-to-end enterprise hotel management and reservation web application built using the modern MERN stack (MongoDB, Express.js, React.js, and Node.js) with secure JSON Web Token (JWT) role-based authentication and Bootstrap-powered luxury glassmorphic styling. The system streamlines hotel operations across independent boutique properties and large hospitality chains, providing real-time room inventory synchronization, interactive suite booking, automated 12% hospitality tax computations, multi-channel payment simulations with downloadable itemized invoices, automated room turnover dispatching to housekeeping staff upon guest checkout, and an executive analytics suite tracking live occupancy rates, Average Daily Rate (ADR), and comprehensive guest lifetime customer profiles.
+      </li>
+    </ul>
+
+    <h2 class="heading-green">Scenario:</h2>
+    <p>
+      In today’s fast-paced hospitality industry, managing hotel operations efficiently and securely is more crucial than ever. At HotelPro, we offer a reliable and intuitive hotel management system designed to meet the evolving needs of modern hospitality. Whether you're handling reservations, managing guest information, or processing payments, our platform ensures seamless operations with advanced security and scalability. HotelPro provides a robust backend infrastructure that powers efficient booking management, real-time availability tracking, and secure user authentication. We prioritize data privacy, encryption, and compliance, ensuring that every guest interaction is protected from unauthorized access. With a user-friendly interface and seamless integrations, our system simplifies hotel management for both independent properties and large hospitality chains.
+    </p>
+
+    <h2 class="heading-green">System Requirements:</h2>
+    <p>
+      To ensure smooth development, deployment, and usage of the <span class="red-text">HotelPro</span> Web Application, certain system prerequisites must be met. These requirements are categorized into software, setup, and hardware specifications, all of which contribute to building a robust and scalable application.
+    </p>
+
+    <h3 class="sub-blue">1. Software Requirements</h3>
+    <p>These are the essential tools and platforms required to develop, test, and run the application efficiently.</p>
+    <ul>
+      <li><strong>Operating System:</strong> Windows 10/11, macOS, or Linux &mdash; Supports cross-platform development and testing.</li>
+      <li><strong>Node.js (v16 or above):</strong> Provides the runtime environment for building and managing frontend logic and Powers the server-side logic and handles API routing. 👉 <a href="https://nodejs.org/" class="blue-link">Download Node.js</a> (Installed: <strong>v24.15.0</strong>)</li>
+      <li><strong>npm (v8 or above):</strong> A package manager required to install dependencies for React and related libraries (Installed: <strong>v11.12.1</strong>).</li>
+      <li><strong>React.js:</strong> A JavaScript library for building dynamic and responsive user interfaces.</li>
+      <li><strong>Browser:</strong> Google Chrome / Firefox (latest version) &mdash; For rendering and testing the UI in real-time.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page">
+    <ul>
+      <li><strong>Express.js:</strong> A lightweight web framework for building RESTful APIs.</li>
+      <li><strong>MongoDB:</strong> A NoSQL database used to store structured and unstructured data related to <span class="red-text">Users, Rooms, Bookings, and Housekeeping Tasks</span> 👉 <a href="https://www.mongodb.com/try/download/community" class="blue-link">Download MongoDB</a> (Installed & Active Service on Port <strong>27017</strong>).</li>
+      <li><strong>Postman:</strong> Tool for testing APIs during development.</li>
+      <li><strong>Visual Studio Code:</strong> Preferred code editor with built-in Git and terminal support.</li>
+      <li><strong>Git & GitHub:</strong> For version control and collaborative development.</li>
+    </ul>
+
+    <h3 class="sub-blue">2. Hardware Requirements</h3>
+    <p>Describes the minimum and recommended specifications needed to support the development and usage of the application.</p>
+    <ul>
+      <li><strong>Processor:</strong> Intel Core i5 (8th Gen or above) / AMD Ryzen 5 or better &mdash; Ensures fast compilation and multitasking during development.</li>
+      <li><strong>RAM:</strong> Minimum 8 GB (16 GB recommended) &mdash; For handling development servers, IDEs, and browser testing simultaneously.</li>
+      <li><strong>Storage:</strong> At least 1 GB free space &mdash; Required for package installations, MongoDB setup, and local project files.</li>
+      <li><strong>Display:</strong> 1366x768 or higher &mdash; Recommended for optimal coding experience and application layout visualization.</li>
+    </ul>
+
+    <h4 class="epic-header">Epic 1 :- Project Architecture: 1hr</h4>
+    <p>
+      Project architecture defines the structured design of components, their interactions, and technologies used to build and deliver the application. Let's dive deep into this project's architecture.
+    </p>
+    <p><strong>● Technical Architecture: (Sample)</strong></p>
+  </div>
+
+  <!-- ==================== PAGE 3 ==================== -->
+  <div class="page">
+    <div class="diagram-box">
+      <svg viewBox="0 0 740 330" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="730" height="320" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+        
+        <!-- Client -->
+        <rect x="25" y="20" width="205" height="290" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="127" y="42" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">Client (React 18)</text>
+        <rect x="40" y="55" width="175" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="127" y="75" font-family="sans-serif" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Landing & Navigation</text>
+        <rect x="40" y="95" width="175" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="127" y="115" font-family="sans-serif" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Rooms Catalog & Filter</text>
+        <rect x="40" y="135" width="175" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="127" y="155" font-family="sans-serif" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Booking Modal & Pricing</text>
+        <rect x="40" y="175" width="175" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="127" y="195" font-family="sans-serif" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Executive Analytics</text>
+        <rect x="40" y="215" width="175" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe"/>
+        <text x="127" y="235" font-family="sans-serif" font-size="9.5" fill="#1e3a8a" text-anchor="middle">Housekeeping Board</text>
+        <rect x="40" y="255" width="175" height="32" rx="4" fill="#fef3c7" stroke="#fcd34d"/>
+        <text x="127" y="275" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#92400e" text-anchor="middle">AuthContext & Role State</text>
+
+        <!-- Gateway Arrow -->
+        <line x1="230" y1="165" x2="270" y2="165" stroke="#64748b" stroke-width="2"/>
+        <text x="250" y="157" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">HTTP/JSON</text>
+
+        <!-- Server -->
+        <rect x="270" y="20" width="220" height="290" rx="6" fill="#f8fafc" stroke="#10b981" stroke-width="1.5"/>
+        <text x="380" y="42" font-family="sans-serif" font-size="12" font-weight="bold" fill="#065f46" text-anchor="middle">Server (Express.js)</text>
+        <rect x="285" y="55" width="190" height="32" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="380" y="75" font-family="sans-serif" font-size="9.5" fill="#064e3b" text-anchor="middle">CORS, Morgan, BodyParser</text>
+        <rect x="285" y="95" width="190" height="32" rx="4" fill="#fef3c7" stroke="#fcd34d"/>
+        <text x="380" y="115" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#78350f" text-anchor="middle">JWT Verification & RBAC</text>
+        <rect x="285" y="135" width="190" height="32" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="380" y="155" font-family="sans-serif" font-size="9.5" fill="#064e3b" text-anchor="middle">Room & Booking API</text>
+        <rect x="285" y="175" width="190" height="32" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="380" y="195" font-family="sans-serif" font-size="9.5" fill="#064e3b" text-anchor="middle">Housekeeping Task Logic</text>
+        <rect x="285" y="215" width="190" height="32" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="380" y="235" font-family="sans-serif" font-size="9.5" fill="#064e3b" text-anchor="middle">Executive Analytics Engine</text>
+        <rect x="285" y="255" width="190" height="32" rx="4" fill="#ecfdf5" stroke="#a7f3d0"/>
+        <text x="380" y="275" font-family="sans-serif" font-size="9.5" fill="#064e3b" text-anchor="middle">Guest CRM Aggregator</text>
+
+        <!-- DB Arrow -->
+        <line x1="490" y1="165" x2="525" y2="165" stroke="#64748b" stroke-width="2"/>
+        <text x="508" y="157" font-family="sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Mongoose</text>
+
+        <!-- Database -->
+        <rect x="525" y="20" width="190" height="290" rx="6" fill="#f8fafc" stroke="#d97706" stroke-width="1.5"/>
+        <text x="620" y="42" font-family="sans-serif" font-size="12" font-weight="bold" fill="#92400e" text-anchor="middle">Database (MongoDB)</text>
+        <rect x="540" y="60" width="160" height="42" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="620" y="80" font-family="sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">users</text>
+        <text x="620" y="93" font-family="sans-serif" font-size="8.5" fill="#92400e" text-anchor="middle">Guest, Staff, Admin</text>
+        <rect x="540" y="115" width="160" height="42" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="620" y="135" font-family="sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">rooms</text>
+        <text x="620" y="148" font-family="sans-serif" font-size="8.5" fill="#92400e" text-anchor="middle">Suites & Inventory</text>
+        <rect x="540" y="170" width="160" height="42" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="620" y="190" font-family="sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">bookings</text>
+        <text x="620" y="203" font-family="sans-serif" font-size="8.5" fill="#92400e" text-anchor="middle">Reservations & Payments</text>
+        <rect x="540" y="225" width="160" height="42" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="620" y="245" font-family="sans-serif" font-size="10" font-weight="bold" fill="#78350f" text-anchor="middle">tasks</text>
+        <text x="620" y="258" font-family="sans-serif" font-size="8.5" fill="#92400e" text-anchor="middle">Turnover & Sanitation</text>
+      </svg>
+    </div>
+
+    <p><strong>○ In-detail explanation</strong></p>
+    <p>
+      The technical architecture coordinates three distinct layers: the <strong>Client Layer</strong> (React 18 with Vite build tooling, Bootstrap 5 UI, and Context API for global session state); the <strong>Application Gateway & Logic Layer</strong> (Node.js & Express.js REST API incorporating CORS, Morgan logger, JSON Web Token authorization middleware, and modular controllers); and the <strong>Database Layer</strong> (MongoDB on port 27017 utilizing Mongoose schemas to persist <code>users</code>, <code>rooms</code>, <code>bookings</code>, and <code>tasks</code>).
+    </p>
+
+    <p><strong>● ER Diagram:(Sample)</strong></p>
+  </div>
+
+  <!-- ==================== PAGE 4 ==================== -->
+  <div class="page">
+    <div class="diagram-box">
+      <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg">
+        <!-- USER -->
+        <g transform="translate(20, 15)">
+          <rect width="200" height="150" rx="5" fill="#f8fafc" stroke="#1e40af" stroke-width="1.5"/>
+          <rect width="200" height="26" rx="5" fill="#1e40af"/>
+          <text x="100" y="18" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">USER</text>
+          <text x="10" y="44" font-family="monospace" font-size="9" fill="#0f172a">_id : ObjectId (PK)</text>
+          <text x="10" y="60" font-family="monospace" font-size="9" fill="#0f172a">name : String</text>
+          <text x="10" y="76" font-family="monospace" font-size="9" fill="#0f172a">email : String (Unique)</text>
+          <text x="10" y="92" font-family="monospace" font-size="9" fill="#0f172a">password : String (Hash)</text>
+          <text x="10" y="108" font-family="monospace" font-size="9" fill="#0f172a">role : Enum (guest/staff/admin)</text>
+          <text x="10" y="124" font-family="monospace" font-size="9" fill="#0f172a">phone : String</text>
+          <text x="10" y="140" font-family="monospace" font-size="9" fill="#0f172a">avatar : String</text>
+        </g>
+
+        <!-- ROOM -->
+        <g transform="translate(480, 15)">
+          <rect width="220" height="150" rx="5" fill="#f8fafc" stroke="#047857" stroke-width="1.5"/>
+          <rect width="220" height="26" rx="5" fill="#047857"/>
+          <text x="110" y="18" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">ROOM</text>
+          <text x="10" y="44" font-family="monospace" font-size="9" fill="#0f172a">_id : ObjectId (PK)</text>
+          <text x="10" y="60" font-family="monospace" font-size="9" fill="#0f172a">roomNumber : String (Unique)</text>
+          <text x="10" y="76" font-family="monospace" font-size="9" fill="#0f172a">name, type : String</text>
+          <text x="10" y="92" font-family="monospace" font-size="9" fill="#0f172a">floor, pricePerNight : Number</text>
+          <text x="10" y="108" font-family="monospace" font-size="9" fill="#0f172a">capacity : { adults, children }</text>
+          <text x="10" y="124" font-family="monospace" font-size="9" fill="#0f172a">status : Enum (Available/Booked..)</text>
+          <text x="10" y="140" font-family="monospace" font-size="9" fill="#0f172a">amenities : [String]</text>
+        </g>
+
+        <!-- BOOKING -->
+        <g transform="translate(20, 180)">
+          <rect width="230" height="145" rx="5" fill="#f8fafc" stroke="#b45309" stroke-width="1.5"/>
+          <rect width="230" height="26" rx="5" fill="#b45309"/>
+          <text x="115" y="18" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">BOOKING</text>
+          <text x="10" y="44" font-family="monospace" font-size="9" fill="#0f172a">_id : ObjectId (PK)</text>
+          <text x="10" y="60" font-family="monospace" font-size="9" fill="#0f172a">bookingCode : String (Unique)</text>
+          <text x="10" y="76" font-family="monospace" font-size="9" fill="#0f172a">user : ObjectId (FK &rarr; User)</text>
+          <text x="10" y="92" font-family="monospace" font-size="9" fill="#0f172a">room : ObjectId (FK &rarr; Room)</text>
+          <text x="10" y="108" font-family="monospace" font-size="9" fill="#0f172a">checkInDate, checkOutDate : Date</text>
+          <text x="10" y="124" font-family="monospace" font-size="9" fill="#0f172a">subtotal, taxAmount, totalAmount</text>
+          <text x="10" y="140" font-family="monospace" font-size="9" fill="#0f172a">status : (Confirmed/Checked-In..)</text>
+        </g>
+
+        <!-- TASK -->
+        <g transform="translate(480, 180)">
+          <rect width="220" height="145" rx="5" fill="#f8fafc" stroke="#6d28d9" stroke-width="1.5"/>
+          <rect width="220" height="26" rx="5" fill="#6d28d9"/>
+          <text x="110" y="18" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">TASK (Housekeeping)</text>
+          <text x="10" y="44" font-family="monospace" font-size="9" fill="#0f172a">_id : ObjectId (PK)</text>
+          <text x="10" y="60" font-family="monospace" font-size="9" fill="#0f172a">room : ObjectId (FK &rarr; Room)</text>
+          <text x="10" y="76" font-family="monospace" font-size="9" fill="#0f172a">roomNumber : String</text>
+          <text x="10" y="92" font-family="monospace" font-size="9" fill="#0f172a">title, assignedTo : String</text>
+          <text x="10" y="108" font-family="monospace" font-size="9" fill="#0f172a">priority : (Urgent/High/Medium)</text>
+          <text x="10" y="124" font-family="monospace" font-size="9" fill="#0f172a">status : (Pending/InProgress/Done)</text>
+        </g>
+
+        <!-- Connectors -->
+        <line x1="120" y1="165" x2="120" y2="180" stroke="#475569" stroke-width="1.8"/>
+        <text x="130" y="174" font-family="sans-serif" font-size="9" fill="#475569">1:N</text>
+        <line x1="480" y1="90" x2="250" y2="250" stroke="#475569" stroke-width="1.8"/>
+        <text x="350" y="170" font-family="sans-serif" font-size="9" fill="#475569">1:N</text>
+        <line x1="590" y1="165" x2="590" y2="180" stroke="#475569" stroke-width="1.8"/>
+        <text x="600" y="174" font-family="sans-serif" font-size="9" fill="#475569">1:N</text>
+      </svg>
+    </div>
+
+    <p><strong>○ In-detail explanation</strong></p>
+    <p>
+      The data schema defines 4 primary MongoDB entities: <strong>USER</strong> stores account credentials and role tiers (<code>guest</code>, <code>staff</code>, <code>admin</code>) with hashed passwords; <strong>ROOM</strong> maintains inventory attributes (roomNumber, category, pricePerNight, capacity, and live status: <code>Available</code>, <code>Booked</code>, <code>Cleaning</code>, <code>Maintenance</code>); <strong>BOOKING</strong> links guests and rooms with stay dates, subtotal, 12% hospitality tax, payment method, and reservation lifecycle; and <strong>TASK</strong> coordinates room sanitation queues linked directly to Room ObjectIds.
+    </p>
+
+    <p><strong>● User Flow(Sample)</strong></p>
+  </div>
+
+  <!-- ==================== PAGE 5 ==================== -->
+  <div class="page">
+    <div class="diagram-box">
+      <svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg">
+        <rect x="280" y="10" width="160" height="28" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+        <text x="360" y="28" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">HotelPro Landing</text>
+
+        <line x1="360" y1="38" x2="360" y2="58" stroke="#475569" stroke-width="1.5"/>
+        <polygon points="360,58 440,78 360,98 280,78" fill="#f8fafc" stroke="#3b82f6" stroke-width="1.2"/>
+        <text x="360" y="82" font-family="sans-serif" font-size="9" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Role / Intent?</text>
+
+        <!-- Guest -->
+        <line x1="280" y1="78" x2="130" y2="78" stroke="#3b82f6" stroke-width="1.5"/>
+        <line x1="130" y1="78" x2="130" y2="105" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect x="50" y="105" width="160" height="26" rx="4" fill="#eff6ff" stroke="#93c5fd"/>
+        <text x="130" y="122" font-family="sans-serif" font-size="8.5" fill="#1e40af" text-anchor="middle">Browse & Filter Rooms</text>
+        <line x1="130" y1="131" x2="130" y2="148" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect x="50" y="148" width="160" height="26" rx="4" fill="#eff6ff" stroke="#93c5fd"/>
+        <text x="130" y="165" font-family="sans-serif" font-size="8.5" fill="#1e40af" text-anchor="middle">Dates & Instant Pricing</text>
+        <line x1="130" y1="174" x2="130" y2="190" stroke="#3b82f6" stroke-width="1.5"/>
+        <rect x="50" y="190" width="160" height="26" rx="4" fill="#ecfdf5" stroke="#10b981"/>
+        <text x="130" y="207" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#065f46" text-anchor="middle">Confetti & Invoice HP-XXX</text>
+
+        <!-- Staff -->
+        <line x1="360" y1="98" x2="360" y2="115" stroke="#10b981" stroke-width="1.5"/>
+        <rect x="270" y="115" width="180" height="26" rx="4" fill="#ecfdf5" stroke="#6ee7b7"/>
+        <text x="360" y="132" font-family="sans-serif" font-size="8.5" fill="#065f46" text-anchor="middle">Front Desk Check-In / Out</text>
+        <line x1="360" y1="141" x2="360" y2="155" stroke="#10b981" stroke-width="1.5"/>
+        <rect x="270" y="155" width="180" height="26" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+        <text x="360" y="172" font-family="sans-serif" font-size="8" font-weight="bold" fill="#78350f" text-anchor="middle">Checkout &rarr; 'Cleaning' & Task</text>
+        <line x1="360" y1="181" x2="360" y2="195" stroke="#10b981" stroke-width="1.5"/>
+        <rect x="270" y="195" width="180" height="26" rx="4" fill="#ecfdf5" stroke="#10b981"/>
+        <text x="360" y="212" font-family="sans-serif" font-size="8" font-weight="bold" fill="#065f46" text-anchor="middle">Kanban Complete & Release</text>
+
+        <!-- Admin -->
+        <line x1="440" y1="78" x2="590" y2="78" stroke="#d97706" stroke-width="1.5"/>
+        <line x1="590" y1="78" x2="590" y2="105" stroke="#d97706" stroke-width="1.5"/>
+        <rect x="510" y="105" width="160" height="26" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="590" y="122" font-family="sans-serif" font-size="8.5" fill="#78350f" text-anchor="middle">Analytics & RevPAR</text>
+        <line x1="590" y1="131" x2="590" y2="148" stroke="#d97706" stroke-width="1.5"/>
+        <rect x="510" y="148" width="160" height="26" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="590" y="165" font-family="sans-serif" font-size="8.5" fill="#78350f" text-anchor="middle">Room Catalog CRUD</text>
+        <line x1="590" y1="174" x2="590" y2="190" stroke="#d97706" stroke-width="1.5"/>
+        <rect x="510" y="190" width="160" height="26" rx="4" fill="#fffbeb" stroke="#fde68a"/>
+        <text x="590" y="207" font-family="sans-serif" font-size="8.5" fill="#78350f" text-anchor="middle">Guest CRM & Lifetime Spend</text>
+      </svg>
+    </div>
+
+    <p><strong>○ In-detail explanation:</strong> Highlights the end-to-end paths for Guests (room exploration, pricing, automated 12% tax, booking, receipt), Staff (check-in, check-out auto-turnover triggers, Kanban sanitation completion), and Admin (revenue metrics, floor plan matrix, and CRM).</p>
+
+    <p><strong>● Features:</strong> JWT Authentication, Multi-category Room Tracking, Booking Engine with Tax Computation, Simulated Payment Processing, Housekeeping Kanban, Executive Dashboard, and Guest CRM.</p>
+
+    <p><strong>● Roles and responsibilities:</strong></p>
+    <ul>
+      <li><span class="badge badge-guest">Guest</span>: Books rooms, chooses payment methods, reviews past reservations, and downloads invoices.</li>
+      <li><span class="badge badge-staff">Staff</span>: Manages Check-In/Check-Out, marks rooms for turnover, and updates task statuses.</li>
+      <li><span class="badge badge-admin">Admin</span>: Manages room inventories, sets prices, analyzes occupancy/revenue, and audits all activities.</li>
+    </ul>
+
+    <p><strong>● MVC Pattern</strong></p>
+    <div class="diagram-box">
+      <svg viewBox="0 0 600 130" xmlns="http://www.w3.org/2000/svg">
+        <rect x="230" y="10" width="140" height="30" rx="4" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+        <text x="300" y="30" font-family="sans-serif" font-size="11" font-weight="bold" fill="#065f46" text-anchor="middle">Controller</text>
+
+        <rect x="50" y="80" width="140" height="30" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="120" y="100" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">View (Routing)</text>
+
+        <rect x="410" y="80" width="140" height="30" rx="4" fill="#fffbeb" stroke="#d97706" stroke-width="1.5"/>
+        <text x="480" y="100" font-family="sans-serif" font-size="11" font-weight="bold" fill="#92400e" text-anchor="middle">Model (Mongoose)</text>
+
+        <line x1="140" y1="80" x2="250" y2="40" stroke="#047857" stroke-width="1.5"/>
+        <text x="175" y="55" font-family="sans-serif" font-size="8" fill="#047857">Send Data</text>
+
+        <line x1="350" y1="40" x2="450" y2="80" stroke="#047857" stroke-width="1.5"/>
+        <text x="420" y="55" font-family="sans-serif" font-size="8" fill="#047857">Request Data</text>
+
+        <line x1="465" y1="80" x2="365" y2="40" stroke="#047857" stroke-width="1.5" stroke-dasharray="3"/>
+        <text x="435" y="68" font-family="sans-serif" font-size="8" fill="#047857">Response Data</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 6 ==================== -->
+  <div class="page">
+    <h1 class="title-main" style="font-size: 18pt; text-align: left; border: none; margin-bottom: 12px;">MVC Architecture Pattern</h1>
+    <p>
+      The backend application is designed using the Model-View-Controller (MVC) architectural pattern, a widely adopted software design approach that promotes separation of concerns by organizing the application into three distinct layers: Model, Controller, and View (Routing Layer). This architecture improves code organization, maintainability, scalability, and collaboration among development teams.
+    </p>
+
+    <h3 class="sub-blue">Model Layer (Data Layer)</h3>
+    <p>
+      The Model Layer is responsible for managing the application's data and business entities. It defines the structure, relationships, validation rules, and constraints for the data stored in the database.
+    </p>
+    <p>
+      In this project, the Model layer is implemented using Mongoose, an Object Data Modeling (ODM) library for MongoDB. Mongoose provides schema-based data modeling, enabling developers to define data structures and perform database operations efficiently.
+    </p>
+    <p>The responsibilities of the Model layer include:</p>
+    <ul>
+      <li>Defining database schemas and data models (<code>User.js</code>, <code>Room.js</code>, <code>Booking.js</code>, <code>Task.js</code>).</li>
+      <li>Managing relationships between collections.</li>
+      <li>Performing CRUD (Create, Read, Update, Delete) operations.</li>
+      <li>Applying data validation and business rules.</li>
+      <li>Interacting directly with the MongoDB database.</li>
+    </ul>
+    <p>
+      By centralizing data-related logic within the Model layer, the application ensures data consistency and simplifies database management.
+    </p>
+
+    <h3 class="sub-blue">Controller Layer (Business Logic Layer)</h3>
+    <p>
+      The Controller Layer acts as the bridge between incoming client requests and the application's data models. It contains the core business logic of the application and coordinates the flow of data between the routing layer and the database.
+    </p>
+    <p>When a request is received, the controller:</p>
+  </div>
+
+  <!-- ==================== PAGE 7 ==================== -->
+  <div class="page">
+    <ol>
+      <li>Accepts and processes the request data.</li>
+      <li>Validates and transforms input where necessary.</li>
+      <li>Invokes appropriate Model methods to perform database operations.</li>
+      <li>Applies business rules and application logic.</li>
+      <li>Formats and sends the appropriate response back to the client.</li>
+    </ol>
+    <p>
+      This separation ensures that business logic remains independent of routing and database implementation details, resulting in cleaner and more maintainable code.
+    </p>
+
+    <h3 class="sub-blue">View Layer (Routing Layer)</h3>
+    <p>
+      In a backend REST API application, there is typically no traditional View layer responsible for rendering user interfaces. Instead, the Routing Layer serves a similar role by defining API endpoints, receiving HTTP requests, and directing them to the appropriate controller functions. While it is not a true View in the classical MVC sense, it acts as the entry point for client interactions with the backend application.
+    </p>
+    <p>The routing layer is responsible for:</p>
+    <ul>
+      <li>Defining RESTful API endpoints.</li>
+      <li>Mapping HTTP methods (GET, POST, PUT, PATCH, DELETE) to controller functions.</li>
+      <li>Managing middleware execution such as authentication, authorization, validation, and logging.</li>
+      <li>Forwarding requests to the appropriate controllers.</li>
+    </ul>
+    <p>
+      This layer serves as the entry point for all client interactions with the backend system and ensures proper request handling and endpoint organization.
+    </p>
+
+    <h3 class="sub-blue">Request Flow in MVC Architecture</h3>
+    <p>The typical request lifecycle within the application follows these steps:</p>
+    <ol>
+      <li>The client sends an HTTP request to a specific API endpoint.</li>
+      <li>The Route receives the request and forwards it to the corresponding Controller.</li>
+      <li>The Controller processes the request and invokes the necessary Model operations.</li>
+    </ol>
+  </div>
+
+  <!-- ==================== PAGE 8 ==================== -->
+  <div class="page">
+    <ol start="4">
+      <li>The Model interacts with the MongoDB database and returns the requested data.</li>
+      <li>The Controller formats the result and sends a response back through the Route.</li>
+      <li>The client receives the final response.</li>
+    </ol>
+    <p>
+      This structured workflow ensures clear responsibilities and efficient communication between application layers.
+    </p>
+
+    <h4 class="epic-header">Epic 2:- Project Setup And Configuration. 30mins</h4>
+
+    <p><strong>● Creating project folder</strong></p>
+    <ol>
+      <li>Create a new folder with your <code>hotelpro</code>.</li>
+      <li>Inside that folder create two new folders.</li>
+      <li>Name one as <strong>frontend</strong> (Client).</li>
+      <li>Name another one as <strong>backend</strong> (Server).</li>
+      <li>Now open that folder in VS Code.</li>
+    </ol>
+
+    <pre>hotelpro/
+├── backend/                  # Server folder (Node.js & Express API)
+│   ├── config/db.js          # MongoDB Mongoose connection
+│   ├── middleware/auth.js    # JWT verification & RBAC
+│   ├── models/               # User, Room, Booking, Task schemas
+│   ├── routes/               # Express route controllers
+│   ├── .env                  # Environment variables
+│   ├── package.json          # Backend dependencies
+│   ├── seed.js               # Database seeding script
+│   └── server.js             # Server entry point
+├── frontend/                 # Client folder (React 18 + Vite)
+│   ├── src/components/       # Navbar, RoomCard, BookingModal, InvoiceModal
+│   ├── src/pages/            # LandingPage, RoomsPage, BookingsPage, etc.
+│   ├── src/context/          # AuthContext with demo role switcher
+│   ├── vite.config.js        # API proxy config to localhost:5000
+│   └── package.json          # Frontend dependencies
+├── .gitignore                # Ignoring node_modules and .env
+├── package.json              # Concurrently orchestrator script
+└── README.md                 # Project documentation</pre>
+
+    <p><strong>● Client setup (installing react app)</strong></p>
+    <ul>
+      <li>Open the Client folder in the terminal of VS Code:
+        <pre>npm create vite@latest . -- --template react</pre>
+      </li>
+      <li>Select React framework from the given options:
+        <pre>Select a framework:
+│ React</pre>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==================== PAGE 9 ==================== -->
+  <div class="page">
+    <ul>
+      <li>Select JavaScript variant from the given options:
+        <pre>Select a variant:
+│ JavaScript</pre>
+      </li>
+      <li>Now lets navigate to the client folder by giving the following command:
+        <pre>cd frontend</pre>
+      </li>
+      <li>To install all the packages run the following command:
+        <pre>npm install bootstrap bootstrap-icons lucide-react react-router-dom canvas-confetti</pre>
+      </li>
+      <li>To start the React server type the following command:
+        <pre>npm run dev</pre>
+      </li>
+    </ul>
+
+    <p><strong>● Server setup (npm init)</strong></p>
+    <ul>
+      <li>Open Server folder in terminal of VS Code:
+        <pre>cd backend
+npm init -y</pre>
+      </li>
+      <li>Create files: <code>server.js</code>, <code>seed.js</code>, <code>.env</code></li>
+      <li>Create folders: <code>models/</code>, <code>routes/</code>, <code>middleware/</code>, <code>config/</code></li>
+    </ul>
+
+    <h4 class="epic-header">Epic 3 :- Backend Development: 8hrs</h4>
+    <ul>
+      <li>Reference video with voiceover or screen shots for backend code.</li>
+    </ul>
+    <div class="note-box">
+      <strong>Note:- Proper Explanation needs to be there for each and every third-party-API consumed.</strong><br>
+      • <strong>express</strong>: HTTP server and RESTful routing engine.<br>
+      • <strong>mongoose</strong>: Strict schema definition, document validation, and ObjectId relationships.<br>
+      • <strong>jsonwebtoken</strong>: Issues cryptographically signed JWT bearer tokens for role authentication.<br>
+      • <strong>bcryptjs</strong>: One-way salt hashing (10 rounds) protecting user passwords.<br>
+      • <strong>cors & morgan</strong>: Cross-origin security and HTTP traffic debugging.
+    </div>
+
+    <h4 class="epic-header">Epic 4 :- Database Development 2hrs</h4>
+    <ul>
+      <li>Reference video with voiceover or screen shots for Database code.</li>
+      <li>Schemas created: <code>User</code> (Admin, Staff, Guest), <code>Room</code> (Pricing, Status, Specs), <code>Booking</code> (Stay dates, 12% tax, Payments), <code>Task</code> (Turnover queues).</li>
+    </ul>
+
+    <h4 class="epic-header">Epic 5:- Front-End Development. 8hrs</h4>
+  </div>
+
+  <!-- ==================== PAGE 10 ==================== -->
+  <div class="page">
+    <ul>
+      <li>Reference video with voiceover or screen shots for frontend code.</li>
+    </ul>
+    <div class="note-box">
+      <strong>Note:- Proper Explanation needs to be there for each and every third-party-API consumed.</strong><br>
+      • <strong>react-router-dom</strong>: Declarative multi-page routing (Rooms, Bookings, Analytics, Housekeeping, CRM).<br>
+      • <strong>bootstrap & bootstrap-icons</strong>: Responsive layout, mobile toggles, status pills, and buttons.<br>
+      • <strong>lucide-react</strong>: Modern SVG icons for clean operational interfaces.<br>
+      • <strong>canvas-confetti</strong>: Celebratory confetti effect upon completed booking.
+    </div>
+
+    <h4 class="epic-header">Epic 6:- Project Execution. 30mins</h4>
+    <p><strong>● Steps for Project execution</strong></p>
+
+    <p><strong>Step 1: Set Up the Frontend (React App):</strong></p>
+    <ul>
+      <li>a) Open a terminal and navigate into the client folder:
+        <pre>cd frontend</pre>
+      </li>
+      <li>b) Once installation is done, start the React development server:
+        <pre>npm run dev</pre>
+      </li>
+      <li>c) The app should now be running on: <strong><a href="http://localhost:5173" class="blue-link">http://localhost:5173</a></strong></li>
+    </ul>
+
+    <p><strong>Step 2: Set Up the Backend (Express Server)</strong></p>
+    <ul>
+      <li>a) Open a new terminal tab/window or split the terminal.</li>
+      <li>b) Navigate into the server folder:
+        <pre>cd ../backend</pre>
+      </li>
+    </ul>
+
+    <p><strong>Step 3: Configure Environment Variables</strong></p>
+    <ul>
+      <li>a) Inside the server folder, create a new file named <code>.env</code> (no file extension).</li>
+      <li>b) In that <code>.env</code> file, add your MongoDB connection string and JWT secret:
+        <pre>PORT=5000
+MONGO_URI=mongodb://localhost:27017/hotelpro
+JWT_SECRET=hotelpro_super_secure_jwt_secret_key_2026</pre>
+      </li>
+    </ul>
+
+    <p><strong>Step 4: Start the Backend Server:</strong></p>
+  </div>
+
+  <!-- ==================== PAGE 11 ==================== -->
+  <div class="page">
+    <ul>
+      <li>Inside the same server folder, run the backend server using:
+        <pre>node server.js</pre>
+      </li>
+      <li>The server should start on: <strong><a href="http://localhost:5000" class="blue-link">http://localhost:5000</a></strong></li>
+    </ul>
+
+    <p><strong>● Output ScreenShots with explanation:</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Screen / Module</th>
+          <th>Explanation of Outputs & Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Landing Page</strong></td>
+          <td>Hero section, category search widget, 6 Epics architectural breakdown, and live platform uptime indicators.</td>
+        </tr>
+        <tr>
+          <td><strong>2. Rooms & Suites Catalog</strong></td>
+          <td>Live room cards, floor specs, capacity, price per night, status badges (Available, Occupied, Cleaning), and category filters.</td>
+        </tr>
+        <tr>
+          <td><strong>3. Booking & Payment Modal</strong></td>
+          <td>Live stay calculation, 12% hospitality tax calculation, payment selection, room locking, and confetti celebration.</td>
+        </tr>
+        <tr>
+          <td><strong>4. Official Invoice & Receipt</strong></td>
+          <td>Printable hotel invoice with itemized room charges, taxes, transaction ID, and browser print trigger.</td>
+        </tr>
+        <tr>
+          <td><strong>5. Housekeeping Kanban</strong></td>
+          <td>Operational board with automated room turnover upon checkout; marking tasks complete auto-releases rooms to 'Available'.</td>
+        </tr>
+        <tr>
+          <td><strong>6. Executive Dashboard</strong></td>
+          <td>Live Occupancy %, Gross Revenue, Average Daily Rate (ADR), Room Category distribution, and real-time floor matrix.</td>
+        </tr>
+        <tr>
+          <td><strong>7. Guest CRM Directory</strong></td>
+          <td>Aggregated guest directory displaying lifetime stays, total expenditure, contact details, and stay history popovers.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>● Demo video link:</strong> Local Demo at <code>http://localhost:5173</code> (Recorded in IDE browser session)</p>
+
+    <p><strong>● Code drive link / GitHub Repository:</strong></p>
+    <ul>
+      <li>
+        👉 <strong><a href="https://github.com/mahajanvedika9-lab/hotelpro" class="blue-link" style="font-size: 11pt; font-weight: bold;">https://github.com/mahajanvedika9-lab/hotelpro</a></strong>
+      </li>
+    </ul>
+
+    <div class="note-box" style="margin-top: 15px;">
+      <strong>Default Evaluation Accounts:</strong><br>
+      • <strong>Admin:</strong> <code>admin@hotelpro.com</code> / <code>admin123</code> (Passkey: <code>HOTELPRO_ADMIN_2026</code>)<br>
+      • <strong>Staff:</strong> <code>staff@hotelpro.com</code> / <code>staff123</code><br>
+      • <strong>Guest:</strong> <code>guest@hotelpro.com</code> / <code>guest123</code>
+    </div>
+  </div>
+
+</body>
+</html>
