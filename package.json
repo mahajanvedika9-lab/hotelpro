@@ -1,0 +1,15 @@
+{
+  "name": "hotelpro",
+  "version": "1.0.0",
+  "description": "HotelPro - Modern Full-Stack Hotel Management System",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "server": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
